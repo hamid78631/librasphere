@@ -1,0 +1,50 @@
+.main-content {
+  position: relative;
+  background-color:#fdfbff ;
+  margin: 0 auto ;/* ✅ nécessaire pour que .top-right fonctionne */
+}
+.slogan-visiteur {
+  font-size: 2.4rem;
+  font-weight: 700; /* plus prononcé */
+  text-align: center;
+  color: #3F0071; /* Violet principal */
+  /* margin-top: 40px; */
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  animation: fadeInSlogan 1.6s ease-in-out;
+}
+/* Structure principale horizontale */
+.accueil-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  /* padding: 40px 80px;
+  margin-top: 40px; */
+}
+
+/* NE PAS toucher à la taille de .vitrine-livre-container */
+.vitrine-livre-container {
+  flex-shrink: 0;
+}
+
+/* VitrineDroite prend juste la place nécessaire */
+.vitrine-droite-wrapper {
+  flex-shrink: 0;
+  width: 360px; /* ou 320px si tu veux plus fin */
+}
+
+
+@keyframes fadeInSlogan {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

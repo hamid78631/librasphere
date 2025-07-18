@@ -1,0 +1,53 @@
+.penalites-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.penalites-container {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  color: #111827;
+}
+
+.penalites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top : 0 auto ; 
+}
+
+.penalites-title {
+  font-size: 2rem;
+  font-weight: bold;
+    color: #3F0071;
+}
+
+.penalites-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  padding:15px ;
+  transition: background 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.penalites-btn:hover {
+  background-color: #810000;
+}
+
+.penalites-content {
+  /* à remplir avec le tableau plus tard */
+}

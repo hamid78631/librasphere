@@ -1,0 +1,126 @@
+.assistant-topbar {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 25px 24px;
+  background-color: #000546; /* bleu foncé */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+
+}
+
+.assistant-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.assistant-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.assistant-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.assistant-search-section {
+  position: relative;
+  width: 45%;
+}
+
+.assistant-search-input {
+  width: 100%;
+  padding: 10px 14px 10px 44px;
+  background-color: #f1f5f9;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  color: #1e293b;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.assistant-search-input::placeholder {
+  color: #64748b;
+}
+
+.assistant-search-input:hover {
+  border-color: #a78bfa; /* violet clair */
+}
+
+.assistant-search-input:focus {
+  border-color: #3c00a5; /* violet foncé */
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+  background-color: #ffffff;
+}
+
+.assistant-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+
+.assistant-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #1e40af; */
+  color: white;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+/* Animation shimmer */
+@keyframes topbarShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.assistant-topbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.274) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% auto;
+  animation: topbarShimmer 15s linear infinite;
+  /* z-index: 1; */
+  animation-delay: 10s; 
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.assistant-topbar {
+  position: relative; /* nécessaire pour ::before */
+  overflow: hidden;   /* pour ne pas dépasser */
+  z-index: 10;        /* contenu au-dessus de l'effet */
+}

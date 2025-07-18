@@ -1,0 +1,205 @@
+/* Conteneur principal */
+.audit-user-container {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  min-height: 100vh;
+  margin-left: 16rem;
+  width: calc(100% - 16rem - 4rem);
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Carte intérieure */
+.audit-user-card {
+  background: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+/* Titre */
+.audit-user-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4f46e5;
+  margin-bottom: 1.5rem;
+}
+
+/* En-tête avec bouton à droite */
+.audit-user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Bouton d'ajout */
+.audit-user-add {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.audit-user-add:hover {
+  background-color: #857bf0;
+  color: white;
+}
+
+/* Table style */
+.audit-user-table {
+  width: 100%;
+  font-size: 0.875rem;
+  text-align: left;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* En-tête de la table */
+.audit-user-table thead {
+  background-color: rgba(99, 102, 241, 0.2);
+  color: #3730a3;
+  text-transform: uppercase;
+}
+
+/* Cellules */
+.audit-user-table th,
+.audit-user-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  vertical-align: top;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Colonne mot de passe limitée */
+.audit-user-table td.password-column {
+  max-width: 180px;
+}
+
+/* Colonne actions visible */
+.audit-user-actions-cell {
+  min-width: 250px;
+  width: 250px;
+  white-space: nowrap;
+}
+
+/* Hover row */
+.audit-user-table tbody tr:hover {
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
+}
+
+/* Actions */
+.audit-user-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.audit-user-actions a {
+  color: #ffffff;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: green;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.audit-user-actions a:hover {
+  background-color: rgb(1, 94, 1);
+  transition: background-color 0.4s ease;
+}
+
+.audit-user-actions button {
+  color: #ffffff;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.audit-user-actions button:hover {
+  background-color: rgb(190, 0, 0);
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.loader-orb {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.loader-orb::before,
+.loader-orb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+}
+
+.loader-orb::before {
+  border-top: 4px solid #7f5af0;
+  border-right: 4px solid #7f5af0;
+  animation: orbit 1s linear infinite;
+}
+
+.loader-orb::after {
+  border-bottom: 4px solid #fff;
+  border-left: 4px solid #fff;
+  animation: orbit 1.5s linear infinite reverse;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-text {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  animation: pulseText 2s ease-in-out infinite;
+  color: #1a008f;
+}
+
+@keyframes pulseText {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}

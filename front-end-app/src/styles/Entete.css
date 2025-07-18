@@ -1,0 +1,210 @@
+/* Entête général */
+.entete {
+    font-family: 'Segoe UI', sans-serif;
+  margin:0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 35px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dark .entete {
+  background-color: #000546; /* dark mode */
+}
+.icon-theme,
+.icon-user {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #374151; /* gris sombre - par défaut en clair */
+  transition: color 0.2s ease;
+}/* Jaune uniquement pour l’icône soleil */
+
+/* Icônes profil plus grande */
+.icon-user {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Mode dark : blanc */
+.dark .icon-theme,
+.dark .icon-user {
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+
+/* Conteneur interne en flex */
+.entete-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centre tout horizontalement */
+  /* width: 100%; */
+  position: relative;
+  margin : 0 auto ;
+}
+
+/* Barre de recherche centrée avec largeur réduite */
+.entete-search {
+  position: relative;
+  width: 40%;
+  min-width: 250px;
+  /* overflow : hidden ; */
+    font-family: 'Segoe UI', sans-serif;
+}
+.entete-search::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.185) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+/* .entete-search:hover::before {
+  animation: shine-slide 1.5s ease-in-out;
+} */
+
+@keyframes shine-slide {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+.entete-search input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 8px;
+  background-color: #dae6ff; /* gray-100 */
+  color: #070250; /* gray-700 */
+  border: none;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+  padding: 15px;
+  padding-left: 40px;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.entete-search input::placeholder {
+  color: #6b7280; /* gray-500 */
+}
+
+.dark .entete-search input {
+  background-color: hsl(224, 100%, 92%); /* dark mode bg */
+  color: #070250; /* text color */
+}
+
+.dark .entete-search input::placeholder {
+  color: #9ca3af;
+}
+
+.dark .icon-sun {
+  color: #facc15;
+  transition: color 0.4s ease;
+}
+.entete-search svg {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #6b7280;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+.dark .entete-search svg {
+  color: #9ca3af;
+}
+
+/* Zone des icônes */
+/* Zone des icônes : position absolue à droite */
+.entete-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.entete-icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-theme {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-user {
+  width: 2rem;
+  height: 2rem;
+}
+/* === Animation immersive de focus Librasphere === */
+
+.entete-search input:focus {
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.5),
+    0 0 20px 6px rgba(99, 102, 241, 0.2);
+  animation: beam-pulse 2.4s infinite ease-in-out;
+  transform: scale(1.015);
+}
+
+/* Animation pulsée subtile */
+@keyframes beam-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 3px rgba(99, 102, 241, 0.5),
+      0 0 20px 6px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(147, 197, 253, 0.6),
+      0 0 40px 10px rgba(147, 197, 253, 0.3);
+  }
+}
+
+/* Ajout d’une légère transition de zoom */
+.entete-search input {
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.3s ease,
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* Retirer l'animation quand on quitte le focus */
+.entete-search input:not(:focus) {
+  animation: none;
+  transform: scale(1);
+}
+.entete-search input:hover {
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.6),
+    0 0 30px 8px rgba(255, 255, 255, 0.4);
+  animation: beam-hover 2s infinite ease-in-out;
+  transform: scale(1.02);
+}
+@keyframes beam-hover {
+  0%, 100% {
+    box-shadow:
+      0 0 0 4px rgba(99, 102, 241, 0.6),
+      0 0 30px 8px rgba(147, 197, 253, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 5px rgba(99, 102, 241, 0.8),
+      0 0 50px 12px rgba(147, 197, 253, 0.6);
+  }
+}

@@ -1,0 +1,73 @@
+.ajouter-emprunt-background {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 0;
+}
+
+.ajouter-emprunt-card {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;
+}
+
+.ajouter-emprunt-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #5b21b6;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ajouter-emprunt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ajouter-emprunt-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.ajouter-emprunt-button {
+  width: 100%;
+  background-color: #7c3aed;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ajouter-emprunt-button:hover {
+  background-color: #5b21b6;
+  transform: translateY(-3px);
+}
+
+.ajouter-emprunt-button:active {
+  transform: scale(0.97);
+}
+.vanta-canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+}

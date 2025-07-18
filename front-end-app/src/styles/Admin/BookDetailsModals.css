@@ -1,0 +1,118 @@
+/* Overlay clair (avec flou) */
+.modal-overlay-light {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  border-top: 20px #1f1f1f;
+}
+
+/* Carte modale */
+.modal-card-light {
+  background-color: #ffffff;
+  color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  max-width: 650px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Bouton de fermeture */
+.modal-close-btn-light {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  color: #a1a1aa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.modal-close-btn-light:hover {
+  color: #7c3aed; /* violet */
+}
+
+/* Contenu de la modale */
+.modal-content-light {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .modal-content-light {
+    flex-direction: row;
+  }
+}
+
+/* Image du livre */
+.modal-book-image-light {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre et auteur */
+.modal-book-title-light {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #3f0071;
+}
+.modal-book-author-light {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #7c3aed;
+  margin-bottom: 0.8rem;
+}
+
+/* Étoiles */
+.modal-rating-light {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.modal-rating-light svg {
+  width: 20px;
+  height: 20px;
+  color: #facc15; /* jaune doré */
+}
+.modal-rating-light .empty {
+  color: #d1d5db;
+}
+.modal-rating-score-light {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-left: 0.3rem;
+}
+
+/* Description */
+.modal-book-description-light {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Infos supplémentaires */
+.modal-book-info-light {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: #4b5563;
+}
+.modal-book-info-light span {
+  font-weight: 600;
+  color: #6d28d9; /* violet foncé */
+}

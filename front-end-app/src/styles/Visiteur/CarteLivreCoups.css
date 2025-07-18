@@ -1,0 +1,60 @@
+.carte-livre {
+  position: relative;
+  width: 160px;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.carte-livre:hover {
+  transform: scale(1.05);
+}
+
+.carte-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Flou en bas avec dégradé */
+.carte-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%; /* ✅ zone moins envahissante */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  pointer-events: none;
+}
+
+/* ✅ Texte lisible au-dessus du flou */
+.carte-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.carte-titre {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.carte-etiquette {
+  font-size: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}

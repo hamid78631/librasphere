@@ -1,0 +1,64 @@
+/* src/styles/Visiteur/VitrineDroite.css */
+
+.vitrine-droite-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 360px; /* ✅ Limite de largeur pour ne pas dépasser */
+  width: 100%;
+}
+
+.vitrine-image-haut {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  margin-top: 24px;
+      background: linear-gradient(to right, rgba(255, 0, 0, 0.384), rgba(255, 255, 255, 0.06));
+}
+
+.vitrine-image-haut img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+      background: linear-gradient(to right, rgba(255, 0, 0, 0.384), rgba(255, 255, 255, 0.06));
+}
+
+.vitrine-images-bas {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  
+}
+
+.image-cadre {
+  width: 48%; /* ✅ Pour que les 2 images tiennent côte à côte */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.image-cadre img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.384), rgba(255, 255, 255, 0.06));
+  transition: filter 0.3s ease; /* ✅ Pour le blur fluide */
+  /* mix-blend-mode: lighten;  */
+}
+
+.image-cadre:hover img {
+  filter: blur(4px); /* ✅ Effet de flou au survol */
+}

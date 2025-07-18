@@ -1,0 +1,168 @@
+.tableau-penalites {
+  padding: 20px 30px;
+  margin:0rem;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.25); /* Plus transparent */
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.titre-section {
+  font-size: 1.5rem;
+  color: #4f46e5; /* violet */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tableau-penalites table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tableau-penalites th,
+.tableau-penalites td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableau-penalites thead th {
+  background-color: rgba(243, 244, 246, 0.9);
+  color: #111827;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tableau-penalites tbody tr:hover {
+  background-color: rgba(249, 250, 251, 0.5);
+}
+
+.badge {
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 0.80rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.badge-red {
+  background-color: #dc2626;
+}
+
+.badge-green {
+  background-color: #16a34a;
+}
+
+@media screen and (max-width: 768px) {
+  .tableau-penalites {
+    padding: 10px;
+    font-size: 0.85rem;
+    max-width: 95%;
+  }
+
+  .tableau-penalites th,
+  .tableau-penalites td {
+    padding: 8px 10px;
+  }
+}
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-supprimer {
+  background-color: #ef4444; /* Rouge vif */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-supprimer:hover {
+  background-color: #dc2626; /* Rouge foncé au survol */
+}
+
+.btn-lever {
+  background-color: #4f46e5; /* Violet foncé */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-lever:hover {
+  background-color: #4338ca; /* Violet plus intense au survol */
+}
+.btn-afficher {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  transition: all 0.3s ease;
+}
+
+.btn-afficher:hover {
+  background-color: #c7d2fe;
+}
+@keyframes btn-afficher {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}

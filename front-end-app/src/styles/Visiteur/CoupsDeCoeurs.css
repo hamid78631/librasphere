@@ -1,0 +1,161 @@
+.section-coup-coeur {
+  padding: 60px 20px;
+  background: #f3f4f6;
+  align-items: start;
+  margin-left: 80px;
+  position: relative; /* nécessaire pour positionner les chevrons */
+}
+
+.titre-coup-coeur {
+  font-size: 1.3rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.titre-coup-coeur::after {
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+.grid-coup-coeur {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;            /* ✅ Important pour permettre le scroll horizontal */
+  overflow-x: auto;             /* ✅ Scroll horizontal */
+  scroll-behavior: smooth;      /* ✅ Smooth scrolling */
+  padding: 0 10px;
+}
+
+.grid-coup-coeur::-webkit-scrollbar {
+  display: none;                /* ✅ On masque la scrollbar */
+}
+
+/* ✅ Chevrons pour le scroll */
+.chevrons-container {
+  position: absolute;
+  top: 10px;                      /* ✅ remonte les chevrons au-dessus du carrousel */
+  left: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;                       /* ✅ espace entre les deux chevrons */
+  z-index: 10;
+}
+
+.chevron-btn {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.chevron-btn:hover {
+  transform: scale(1.1);
+}
+/* ———————————————————  Modale  ——————————————————— */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-livre {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-livre img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.modal-livre h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Bouton fermer amélioré */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(243, 244, 246, 0.85);
+  transform: scale(1.1);
+}
+
+.modal-close:active {
+  transform: scale(0.95);
+}
+
+.modal-close svg {
+  stroke: #374151;
+  transition: stroke 0.2s ease;
+}
+
+.modal-close:hover svg {
+  stroke: #111827;
+}
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.btn-reserver {
+  background-color: #3F0071;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reserver:hover {
+  background-color: #2c0058;
+}

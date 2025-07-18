@@ -1,0 +1,54 @@
+/* ————————————— Section générale ————————————— */
+.section-categories {
+  padding: 60px 20px;
+  background: #fdfdfd;
+  text-align: center;
+background: #e0f2fe; /* violet clair pastel */
+
+}
+
+/* ————————————— Titre ————————————— */
+.titre-categories {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 32px;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+/* ————————————— Grille responsive ————————————— */
+.grille-categories {
+    margin-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 36px;
+  justify-items: center;
+}
+
+/* ————————————— Image ronde ————————————— */
+.categorie-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: default;
+}
+
+.categorie-image:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
+}
+
+/* ————————————— Nom de la catégorie ————————————— */
+.categorie-nom {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+}

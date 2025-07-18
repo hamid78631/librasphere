@@ -1,0 +1,244 @@
+.audit-emprunts-historique-container {
+  margin-left: 15rem;
+  /* margin-right : 10rem ;  */
+  padding: 2rem;
+  /* padding-left: 16rem; */
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+.audit-emprunts-historique-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.audit-emprunts-historique-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3F0071;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.audit-emprunts-historique-table-wrapper {
+  overflow-x: auto;
+}
+
+.audit-emprunts-historique-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.audit-emprunts-historique-table thead {
+  background-color: #ede9fe;
+  color: #3F0071;
+}
+
+.audit-emprunts-historique-table thead th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.audit-emprunts-historique-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.audit-emprunts-historique-table tr:hover {
+  background-color: #ede9fe;
+  transition: background-color 0.3s ease;
+}
+
+.audit-statut-badge {
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.audit-statut-en_cours {
+  background-color: #ffcc00;
+}
+
+.audit-statut-retourné {
+  background-color: #16a34a;
+}
+
+.audit-statut-en_retard {
+  background-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .audit-emprunts-historique-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .audit-emprunts-historique-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .audit-emprunts-historique-table th,
+  .audit-emprunts-historique-table td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .audit-emprunts-historique-title {
+    font-size: 1.4rem;
+  }
+}
+
+.audit-btn-retourner {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+}
+
+.audit-btn-retourner:hover {
+  background-color: #4338ca;
+  transform: translateY(-5px);
+}
+
+.audit-btn-retourner:active {
+  background-color: #3730a3;
+  transform: scale(0.97);
+}
+
+.audit-popup-emprunt {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.audit-popup-content {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.audit-popup-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #6b21a8;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.audit-popup-content p {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.audit-btn-fermer {
+  background-color: #7c3aed;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1.5rem;
+}
+
+.audit-btn-fermer:hover {
+  background-color: #5b21b6;
+}
+
+.audit-btn-voir {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.audit-btn-voir:hover {
+  background-color: #4338ca;
+  transform: translateY(-5px);
+}
+
+.audit-btn-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.audit-btn-ajouter-emprunt {
+  background-color: #7c3aed;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audit-btn-ajouter-emprunt:hover {
+  background-color: #5b21b6;
+}
+
+.audit-btn-toggle-emprunt {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audit-btn-toggle-emprunt:hover {
+  background-color: #6b21a8;
+  box-shadow: 0 0 20px 6px rgba(124, 58, 237, 0.4);
+  transform: translateY(-3px);
+}
+
+.audit-btn-toggle-emprunt:active {
+  transform: scale(0.98);
+}

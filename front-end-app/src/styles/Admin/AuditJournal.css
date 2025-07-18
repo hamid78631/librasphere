@@ -1,0 +1,84 @@
+/* AuditJournal.css */
+
+/* Container principal */
+.audit-container {
+    margin-left: 16rem;
+    padding: 2rem;
+  /* backdrop-filter: blur(8px); */
+  background-color: rgba(255, 255, 255, 0.3); /* Fond flou */
+  min-height: 100vh;
+  width : 70% ;  font-family: 'Segoe UI', sans-serif;
+  }
+  .audit-card {
+    background: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+  }
+  .audit-title {
+    font-size: 2rem;
+  font-weight: bold;
+  color: #4f46e5; /* Indigo-600 */
+  margin-bottom: 2rem;
+  }
+  
+
+  .audit-table {
+    width: 100%;
+    font-size: 0.875rem; /* text-sm */
+    text-align: left;
+  }
+  
+  .audit-table thead {
+    background-color: rgba(99, 102, 241, 0.2); /* bg-indigo-100 */
+    color: #3730a3; /* text-indigo-800 */
+    text-transform: uppercase;
+    font-size: 0.75rem; /* text-xs */
+  }
+  
+  .audit-table th,
+  .audit-table td {
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius : 5px ; 
+    border-bottom: 1px solid rgba(156, 163, 175, 0.4);
+    gap:20px;
+  }
+  
+  .audit-table tbody tr {
+    border-bottom: 1px solid #e5e7eb; /* border-b */
+    transition: background-color 0.3s;
+  }
+  
+  .audit-table tbody tr:hover {
+    background-color: rgb(255, 255, 255);  /* hover:bg-gray-50 */
+  }
+  
+  /* Badges dynamiques */
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px; /* full rounded */
+  }
+  
+  .badge-suppression {
+    background-color: #ff0000;
+    color: #b91c1c;
+  }
+  
+  .badge-ajout {
+    background-color: #00d165;
+    color: #065f46;
+  }
+  
+  .badge-modification {
+    background-color: #ffcc00;
+    color: #92400e;
+  }
+  
+  .badge-connexion {
+    background-color: #4696ff;
+    color: #1e40af;
+  }
+  

@@ -1,0 +1,66 @@
+/* ========= 🌌 HALO plein écran ========= */
+.ajout-livre-bg {
+  position: fixed;
+  inset: 0;              /* top:0 right:0 bottom:0 left:0 */
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;           /* derrière tout */
+  overflow: hidden;
+  pointer-events: none;  /* ne bloque pas les clics */
+}
+
+/* ========= 🧱 Page wrapper ========= */
+.ajout-livre-global {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;     /* page au moins haute comme l’écran */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ========= 📜 Zone scrollable ========= */
+.ajout-livre-scroll {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 2rem 2rem 10rem 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.vanta-canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+}
+
+/* ========= ⏳ Loader ========= */
+/* .loader-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.loader-orb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+.loader-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } } */

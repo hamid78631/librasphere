@@ -1,0 +1,133 @@
+/* Conteneur principal */
+.timeline-horizontal-container {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', sans-serif;
+}
+
+/* Bouton afficher/masquer */
+.btn-toggle-timeline {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-toggle-timeline:hover {
+  background-color: #5b21b6;
+  transform: translateY(-2px);
+}
+
+/* Scroll controls */
+.timeline-scroll-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.timeline-scroll-btn {
+  background-color: #ede9fe;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #3f0071;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.timeline-scroll-btn:hover {
+  background-color: #dcd0ff;
+}
+
+/* Zone scrollable */
+.timeline-horizontal-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.timeline-horizontal-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.timeline-horizontal-wrapper::-webkit-scrollbar-thumb {
+  background-color: #a78bfa;
+  border-radius: 10px;
+}
+
+/* Style de base pour chaque activité */
+.timeline-pill {
+  min-width: 280px;
+  background-color: #f9f9f9;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.timeline-pill:hover {
+  transform: translateY(-5px);
+}
+
+/* Icones */
+.timeline-pill-icon {
+  font-size: 1.8rem;
+}
+
+/* Texte à droite */
+.timeline-pill-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-pill-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.timeline-pill-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+/* Styles spécifiques par type */
+.timeline-emprunt {
+  border-left: 4px solid #ffcc00;
+}
+
+.timeline-retour {
+  border-left: 4px solid #16a34a;
+}
+
+.timeline-retard {
+  border-left: 4px solid #dc2626;
+}
+
+/* Message si aucune activité */
+.timeline-empty {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6b7280;
+  padding: 1rem;
+}
