@@ -19,6 +19,9 @@ import ConnexionVisiteur from './pages/Visiteur/ConnexionVisiteur.jsx';
 import ContactVisiteur from './pages/Visiteur/ContactVisiteur.jsx'
 import CataloguePublic from './pages/Visiteur/CataloguePublic.jsx';
 import Reservations from './pages/Admin/Reservations.jsx';
+import EditReservation from './pages/Admin/EditReservation.jsx';
+import AjoutReservation from './pages/Admin/AjoutReservations.jsx';
+
 function App() {
 
   return (
@@ -33,6 +36,8 @@ function App() {
       <Route path="/admin/statistiques" element={<Stats />} />     
       <Route path='/admin/reservations' element={<Reservations/>} />
       <Route path="/admin/utilisateurs" element={<Users />} />
+      <Route path="/admin/reservations/editReservations/:id" element={<EditReservation />} />
+      <Route path="/admin/reservations/ajout" element={<AjoutReservation /> } />
     {/* Formulaires pour les livres */}
       <Route path='/admin/livres/edit/:id' element={<EditLivre />}/>
       <Route path='/admin/livres/ajoutLivre' element={<AjouterLivre />}/>

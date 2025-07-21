@@ -1,0 +1,101 @@
+.edit-reservation-container {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  max-width: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.edit-reservation-form {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  width: 150%;
+  max-width: 42rem;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.form-logo-wrapper img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #c7d2fe;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0e7ff;
+  margin-top: 1.25rem;
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+
+  /* Forcer le style du select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.7);
+}
+
+.form-button {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: #291eff;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #4f3fff;
+}
+
+/* CORRECTION VISIBILITÉ OPTIONS SELECT */
+select.form-input option {
+  background-color: #1f2937;
+  color: white;
+}

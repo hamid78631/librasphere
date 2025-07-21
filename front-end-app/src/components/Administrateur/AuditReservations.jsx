@@ -84,7 +84,7 @@ function AuditReservations({ searchItem }) {
             <div style={{ textAlign: 'right', marginBottom: '1.5rem' }}>
               <button
                 className="audit-btn-ajouter-emprunt"
-                onClick={() => navigate('')}
+                onClick={() => navigate('/admin/reservations/Ajout')}
               >
                 + Ajouter une réservation
               </button>
@@ -118,7 +118,7 @@ function AuditReservations({ searchItem }) {
                 <td>{reservation.date_debut}</td>
                 <td>{reservation.date_fin}</td>
                 <td>
-                  <Link to="" className="action-btn modifier-btn">Modifier</Link>
+                  <Link to={`/admin/reservations/editReservations/${reservation.id}`} className="action-btn modifier-btn">Modifier</Link>
                   <button
                     className="action-btn supprimer-btn"
                     onClick={(e) => {
