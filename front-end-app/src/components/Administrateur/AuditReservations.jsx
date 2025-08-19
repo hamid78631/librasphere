@@ -9,7 +9,7 @@ import {useNavigate} from 'react-router-dom'
 
 function AuditReservations({ searchItem }) {
   const [reservations, setReservations] = useState([])
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
 
 
   const navigate = useNavigate()
@@ -26,7 +26,7 @@ function AuditReservations({ searchItem }) {
         toast.error('Erreur lors de la récupération des réservations!')
         console.error('Erreur : ', err)
       })
-      .finally(() => setLoading(false))
+      // .finally(() => setLoading(false))
   }, [])
 
   const handleClick = (id) => {
@@ -66,12 +66,12 @@ function AuditReservations({ searchItem }) {
     <div className="audit-emprunts-historique-container page-content">
       <Toaster position="top-right" />
 
-      {loading ? (
+      {/* {loading ? (
         <div className="loader-container">
           <div className="loader-orb"></div>
           <div className="loader-text">Chargement en cours...</div>
         </div>
-      ) : (
+      ) : ( */}
         <motion.div
           className="audit-emprunts-historique-card"
           initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ function AuditReservations({ searchItem }) {
             </table>
           </div>
         </motion.div>
-      )}
+      
     </div>
   )
 }

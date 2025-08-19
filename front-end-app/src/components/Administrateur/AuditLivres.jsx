@@ -10,7 +10,7 @@ import BookDetailsModal from '../Administrateur/BookDetailsModal';
 
 function AuditLivres({ searchItem }) {
   const [livresListe, setLivresListe] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [selectedBook, setSelectedBook] = useState(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function AuditLivres({ searchItem }) {
         toast.error("Échec du chargement des livres !");
         console.error("Erreur de chargement :", err);
       })
-      .finally(() => setLoading(false));
+
   }, []);
 
   const handleClick = (id) => {
@@ -71,12 +71,12 @@ function AuditLivres({ searchItem }) {
         onClose={() => setSelectedBook(null)}
       />
 
-      {loading ? (
+      {/* {loading ? (
         <div className="loader-container">
           <div className="loader-orb"></div>
           <div className="loader-text">Chargement en cours...</div>
         </div>
-      ) : (
+      )  */}
         <motion.div
           className="livres-card"
           initial={{ opacity: 0, y: 20 }}
@@ -168,7 +168,7 @@ function AuditLivres({ searchItem }) {
             </table>
           </div>
         </motion.div>
-      )}
+      
     </div>
   );
 }

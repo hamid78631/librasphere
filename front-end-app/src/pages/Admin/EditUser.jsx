@@ -68,7 +68,6 @@ function EditUser() {
   try {
     const formData = new FormData();
 
-    // N'ajouter que les champs modifiables
     const champs = ['nom', 'prenom', 'email', 'telephone', 'role', 'statut'];
 
     champs.forEach((champ) => {

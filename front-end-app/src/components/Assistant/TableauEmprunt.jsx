@@ -8,13 +8,13 @@ import { useNavigate } from 'react-router-dom';
 
 function TableauEmprunt({ searchItem }) {
   const [emprunts, setEmprunts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [afficher, setAfficher] = useState(true);
   const [selectedEmprunt, setSelectedEmprunt] = useState(null);
   const navigate = useNavigate();
 
   const fetchEmprunts = () => {
-    setLoading(true);
+    // setLoading(true);
     axios.get('http://localhost:8000/api/emprunts')
       .then(res => {
         if (Array.isArray(res.data)) {
@@ -34,7 +34,7 @@ function TableauEmprunt({ searchItem }) {
         toast.error('Erreur lors du chargement!');
         console.error('erreur:', err);
       })
-      .finally(() => setLoading(false));
+      // .finally(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -97,12 +97,12 @@ function TableauEmprunt({ searchItem }) {
     <div className="audit-emprunts-container page-content">
       <Toaster position="top-right" reverseOrder={false} />
 
-      {loading ? (
+      {/* {loading ? (
         <div className="loader-container">
           <div className="loader-orb"></div>
           <div className="loader-text">Chargement des emprunts...</div>
         </div>
-      ) : (
+      ) : ( */}
         <>
           <button className="btn-toggle-emprunt" onClick={() => setAfficher(prev => !prev)}>
             {afficher ? 'Masquer le tableau des emprunts' : 'Afficher le tableau des emprunts'}
@@ -217,7 +217,7 @@ function TableauEmprunt({ searchItem }) {
             )}
           </AnimatePresence>
         </>
-      )}
+     
     </div>
   );
 }

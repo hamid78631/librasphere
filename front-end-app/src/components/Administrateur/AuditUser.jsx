@@ -9,7 +9,7 @@ import UserDetailsModal from './UserDetailsModal';
 
 function AuditUser({ searchItem }) {
   const [ListeUser, setListeUser] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [selectedUser , setSelectedUser] = useState(null)
   useEffect(() => {
     axios.get('http://localhost:8000/api/users')
@@ -63,12 +63,12 @@ const filteredUsers = ListeUser.filter(user => {
         open={!!selectedUser}
         onClose={() => setSelectedUser(null)}
       />
-      {loading ? (
+      {/* {loading ? (
         <div className="loader-container">
           <div className="loader-orb"></div>
           <div className="loader-text">Chargement en cours...</div>
         </div>
-      ) : (
+      ) : ( */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ const filteredUsers = ListeUser.filter(user => {
             </table>
           </div>
         </motion.div>
-      )}
+      
     </div>
   );
 }

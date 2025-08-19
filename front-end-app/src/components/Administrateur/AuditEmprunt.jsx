@@ -9,12 +9,12 @@ import '../../styles/Admin/AuditEmprunt.css'
 
 function AuditEmprunt({ searchItem }) {
   const [emprunts, setEmprunts] = useState([])
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   const [selectedEmprunt, setSelectedEmprunt] = useState(null)
   const navigate = useNavigate()
 
   const fetchEmprunts = () => {
-    setLoading(true)
+    // setLoading(true)
     axios.get('http://localhost:8000/api/emprunts')
       .then(res => {
         if (Array.isArray(res.data)) {
@@ -34,7 +34,7 @@ function AuditEmprunt({ searchItem }) {
         toast.error('Erreur lors du chargement!')
         console.error('erreur:', err)
       })
-      .finally(() => setLoading(false))
+      // .finally(() => setLoading(false))
   }
 
   useEffect(() => {
@@ -93,12 +93,12 @@ function AuditEmprunt({ searchItem }) {
   return (
     <div className="audit-emprunts-historique-container page-content">
       <Toaster position="top-right" reverseOrder={false} />
-      {loading ? (
+      {/* {loading ? (
         <div className="loader-container">
           <div className="loader-orb"></div>
           <div className="loader-text">Chargement des emprunts...</div>
-        </div>
-      ) : (
+        </div> */}
+      
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -197,7 +197,7 @@ function AuditEmprunt({ searchItem }) {
             </div>
           )}
         </motion.div>
-      )}
+      
     </div>
   )
 }
