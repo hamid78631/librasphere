@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('role');
             $table->string('password');
             $table->string('statut')->default('actif');
-            $table->date('date_inscription')->default(now());
+            $table->date('date_inscription')->default(DB::raw('CURRENT_DATE'));
             $table->timestamps();
         });
     }

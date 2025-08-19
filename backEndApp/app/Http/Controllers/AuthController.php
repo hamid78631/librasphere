@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash; // ✅ CORRECT
+use Illuminate\Support\Facades\Hash; 
 use App\Models\Userr ; 
 use App\Http\Requests\StoreUserRequest;
 

@@ -19,5 +19,6 @@ class Userr extends Model
         'date_inscription',
         'password'
     ];
-    protected $table = 'Utilisateurs';
+    
+    protected $table = 'utilisateurs';
 }

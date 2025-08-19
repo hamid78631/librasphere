@@ -15,6 +15,32 @@ class UserController extends Controller
 
     public function index(){
         $users = Userr::all();
+
+        // Userr::firstOrCreate(
+        //     ['email' => 'john@doe.fr'],
+        //     [
+        //         'nom' => 'Admin',
+        //         'numero_identite' => 'ADMIN001',
+        //         'role' => 'admin',
+        //         'statut' => 'actif',
+        //         'password' => Hash::make('0000'),
+        //         'date_inscription' => now()->toDateString()
+        //     ]
+        // );
+
+        
+        // Userr::firstOrCreate(
+        //     ['email' => 'assistant@doe.fr'],
+        //     [
+        //         'nom' => 'Assistant',
+        //         'numero_identite' => 'ASSISTANT001',
+        //         'role' => 'assistant',
+        //         'statut' => 'actif',
+        //         'password' => Hash::make('00000'),
+        //         'date_inscription' => now()->toDateString()
+        //     ]
+        // );
+
         return response()->json($users , 200);
     }
     public function show($id){
@@ -37,9 +63,22 @@ class UserController extends Controller
 
         $user = Userr::create($validated);
 
+       
+
+    //     $admin = Userr::updateOrCreate(['email' => 'John@doe.fr'],
+    // [
+    //     'nom' => "john", 
+    //     'numero_identite' => 'AA340891',
+    //     'role'=> 'admin',
+    //     'statut' => 'actif' , 
+    //     'password' => Hash::make('0000'), 
+    //     'date_inscription' => now()->toDateString()
+    // ]); 
+      
         return response()->json([
             'message' => 'Utilisateur ajouté avec succès.',
-            'user' => $user->only(['id', 'nom', 'numero_identite', 'email', 'role', 'statut', 'date_inscription'])
+            'user' => $user->only(['id', 'nom', 'numero_identite', 'email', 'role', 'statut', 'date_inscription']) , 
+            'admin' => $admin->only(['id','nom','numero_identite','email','role','statut','date_inscription'])
         ], 201);
         }catch(\Exception $e){
             Log::error("Erreur lors de la création de l'utilisateur!",['exception' => $e->getMessage()]);
@@ -69,7 +108,7 @@ class UserController extends Controller
             'sometimes',
             'required',
             'string',
-            Rule::unique('users')->ignore($user->id)
+            Rule::unique('utilisateurs')->ignore($user->id)
         ];
         //validons les données 
 

@@ -23,7 +23,6 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'nom' => 'sometimes|required|string|max:255',
-            
             'numero_identite' => 'sometimes|required|string|max:100|unique:users,numero_identite',
             'email' => 'sometimes|required|email|unique:users,email',
             'role' => 'sometimes|required|string|in:admin,assistant,adherent',
