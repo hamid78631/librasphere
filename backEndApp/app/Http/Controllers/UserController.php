@@ -16,17 +16,17 @@ class UserController extends Controller
     public function index(){
         $users = Userr::all();
 
-        // Userr::firstOrCreate(
-        //     ['email' => 'john@doe.fr'],
-        //     [
-        //         'nom' => 'Admin',
-        //         'numero_identite' => 'ADMIN001',
-        //         'role' => 'admin',
-        //         'statut' => 'actif',
-        //         'password' => Hash::make('0000'),
-        //         'date_inscription' => now()->toDateString()
-        //     ]
-        // );
+        Userr::firstOrCreate(
+            ['email' => 'Ajtmaroc@gmail.com'],
+            [
+                'nom' => 'Admin',
+                'numero_identite' => 'AJT001',
+                'role' => 'admin',
+                'statut' => 'actif',
+                'password' => Hash::make('1111'),
+                'date_inscription' => now()->toDateString()
+            ]
+        );
 
         
         // Userr::firstOrCreate(
