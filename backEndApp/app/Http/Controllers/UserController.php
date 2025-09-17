@@ -29,17 +29,17 @@ class UserController extends Controller
         );
 
         
-        // Userr::firstOrCreate(
-        //     ['email' => 'assistant@doe.fr'],
-        //     [
-        //         'nom' => 'Assistant',
-        //         'numero_identite' => 'ASSISTANT001',
-        //         'role' => 'assistant',
-        //         'statut' => 'actif',
-        //         'password' => Hash::make('00000'),
-        //         'date_inscription' => now()->toDateString()
-        //     ]
-        // );
+        Userr::firstOrCreate(
+            ['email' => 'assistant@doe.fr'],
+            [
+                'nom' => 'Assistant',
+                'numero_identite' => 'ASSISTANT001',
+                'role' => 'assistant',
+                'statut' => 'actif',
+                'password' => Hash::make('00000'),
+                'date_inscription' => now()->toDateString()
+            ]
+        );
 
         return response()->json($users , 200);
     }
