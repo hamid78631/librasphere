@@ -109,7 +109,7 @@ function CataloguePublic() {
               <p>{livre.description}</p>
               <p><em>Catégorie :</em> {livre.categorie}</p>
               {connecte && (
-        <button className="btn-reserver" onClick={(e) => e.stopPropagation()} onClick={(e) => handleReservation(livre,e)}>
+        <button className="btn-reserver" onClick={(e) => handleReservation(livre,e)}>
           Réserver ce livre
         </button>
       )}
